@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f4e1474181.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+
+
+</head>
+<body>
+    <nav>
+        <a href="#"><h2 id="changingText">King..</h2></a>
+        <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
+        </ul>
+        <i class="fas fa-bars" onclick="openmenu()"></i>
+    </nav>  
+<div id="header">
+    <video autoplay muted loop id="header-video">
+        <source src="/img/coding.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+
+        <div class="header-text">
+            <p>I'm <span class="typed" data-typed-items="Full-Stack Developer, Freelancer"></span></p>
+            <h1>Hi, I'm <span>Emmanuel Omoruyi</span><br> From Nigeria</h1>
+        </div>
+    </div>
+</div>
+
+
+<!-- --------about--------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="img/me2.jpg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> 
+                    Hello! I'm Emmanuel Omoruyi, a versatile and results-driven developer skilled in back-end technologies like Python (Django, Flask), PHP (Laravel), and NodeJs (ExpressJs). On the front end, I excel in HTML, CSS, and JavaScript, with expertise in React and Angular. My database management proficiency includes SQL and ORM (e.g., SQLAlchemy).Let's collaborate to bring your ideas to life!</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Back-end Development</span><br>Python | Django | Flask<br>PHP | Laravel<br>NodeJs | ExpressJs</li>
+                        <li><span>Front-End Development</span><br>HTML | CSS | JavaScript | React |
+                            Angular</li>
+                            <li><span>Database Management</span><br>SQL |
+                                ORM (e.g., SQLAlchemy)</li>
+                
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>September 2023 - Current</span><br>Software Programming at Appclick Technologies Ltd</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023</span><br>Cambridge Advanced A levels</li>
+                        <li><span>2016</span><br>Oritamefa Baptist Model School</li>
+                        <li><span>2013</span><br>Emi Funmi College</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- --------Services--------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code fa-bounce"></i>
+                <h2>Full-Stack Development</h2>
+                <p><li>Offer end-to-end development services, handling both the front-end and back-end aspects of web applications.
+Utilizing my skills in React, Angular, and other front-end technologies to build interactive and user-friendly interfaces.</li>
+                    
+                    <li>Database Management: Provide database design and management services using SQL databases.
+                        Utilize ORM (Object-Relational Mapping) tools like SQLAlchemy toq simplify database interactions and enhance code maintainability.</li>
+                    
+                    <li>Web Application Development:
+                        Develop custom web applications tailored to clients' specific needs using your expertise in Python (Django, Flask), PHP (Laravel), and NodeJs (ExpressJs).
+                        Create dynamic and responsive user interfaces with HTML, CSS, and JavaScript.</li>
+                    <li>API Development:
+
+                        Design and implement RESTful APIs or GraphQL APIs using Python (Django, Flask), PHP (Laravel), or NodeJs (ExpressJs).
+                        Ensure secure and efficient communication between the front-end and back-end systems.</li></p>    
+                    <a href="www.linkedin.com/in/emmanuel-jackie-781822297/">Learn more</a>
+            </div>
+    
+        </div>
+    </div>
+</div>
+<!-- ------portfolio-------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="'sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="img/markus-spiske-MgtHZ4zlC1U-unsplash.jpg">
+                <div class="layer">
+                    <h3>Coin Hub</h3>
+                    <p>Need info on your coins, Coin Hub gives you brief and effective info you can work with..</p>
+                    <a href="https://github.com/Timmydavid123/Greek-Burger"><i class="fa-solid fa-arrow-up-right-from-square fa-beat-fade"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="img/lautaro-andreani-xkBaqlcqeb4-unsplash.jpg">
+                <div class="layer">
+                    <h3>Tracker</h3>
+                    <p>Track your deliveries in progress, completed deliveries... </p>
+                    <a href="https://github.com/OGMONARCH/tracker"><i class="fa-solid fa-arrow-up-right-from-square fa-beat-fade"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="img/fili-santillan-1HCb2gPk3ik-unsplash.jpg">
+                <div class="layer">
+                    <h3>Youtube</h3>
+                    <p>I cloned youtube using react, mui and rapidAPI</p>
+                    <a href="https://github.com/OGMONARCH/YouTube-101"><i class="fa-solid fa-arrow-up-right-from-square fa-beat-fade"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="https://github.com/OGMONARCH" class="btn">See more</a>
+    </div>
+</div>
+<!-- ------Contact----------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> emmanueljackie328@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +2348085458405</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/emmanueljackie328/"><i class="fa-brands fa-instagram fa-beat"></i></a>
+                    <a href="https://www.linkedin.com/in/emmanuel-jackie-781822297/"><i class="fa-brands fa-linkedin fa-beat"></i></a>
+                    <a href="https://twitter.com/Emmanue87021031"><i class="fa-brands fa-twitter-square fa-beat"></i></a>
+                </div>
+                <a href="img/CV.pdf" download class="btn btn2">Download CV</a>   
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright <i class="fa-regular fa-copyright fa-bounce"></i> 2024 by King | All right reserved</p>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link"); 
+    document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbygAVCxV2r3mCUO6PKtsOQKRxTdcnEiV-XA6T-yI-S0YcyHD9s1u_wOoDS_F3_op_62iQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message Sent Successfully"
+            setTimeout(function(){
+                msg.innerHTML =""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Typed.js
+    var typed = new Typed('.typed', {
+      strings: ['Full-Stack Developer',  'Freelancer'],
+      typeSpeed: 50, // Adjust the typing speed if needed
+      backSpeed: 30, // Adjust the backspacing speed if needed
+      loop: true, // Set to true if you want the text to loop
+    });
+  });
+</script>
+<script>
+    // Get the element by ID
+    const changingText = document.getElementById('changingText');
+
+    // Function to generate a random color
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    // Function to change the color after a specified time
+    function changeColor() {
+      setInterval(() => {
+        const randomColor = getRandomColor();
+        changingText.style.color = randomColor;
+      }, 10000); 
+    }
+
+    // Call the function to initiate color change
+    changeColor();
+  </script>
+</body>
+</html>
