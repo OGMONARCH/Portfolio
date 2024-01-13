@@ -444,7 +444,7 @@ nav .fas{
       margin-top: 300px; /* Adjusted margin for better spacing */
       text-align: left;
       margin-left: -120px;
-      flex-basis: 150%; /* Adjusted flex-basis for better responsiveness */
+      flex-basis: 90%; /* Adjusted flex-basis for better responsiveness */
       margin-bottom: -120px;
         
     }
