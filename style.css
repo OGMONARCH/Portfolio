@@ -386,7 +386,7 @@ nav .fas{
     }
   
     .header-text h1 {
-      font-size: 24px; /* Adjusted font size for better readability */
+      font-size: 20px; /* Adjusted font size for better readability */
     }
 
     #about {
@@ -433,21 +433,22 @@ nav .fas{
     }
   
     .about-col-1 img {
-      margin-top: -100px; 
+      margin-top: -150px; 
       width: 250%; 
       margin-left: 30px;
       
     }
-  
+
     .about-col-2 {
-      font-size: 14px;
-      margin-top: 300px; /* Adjusted margin for better spacing */
-      text-align: left;
-      margin-left: -120px;
-      flex-basis: 90%; /* Adjusted flex-basis for better responsiveness */
-      margin-bottom: -120px;
-        
-    }
+        font-size: 14px;
+        margin-top: 300px; /* Adjusted margin for better spacing */
+        text-align: left;
+        margin-left: -120px;
+        flex-basis: 90%; /* Adjusted flex-basis for better responsiveness */
+        margin-bottom: -120px;
+          
+      }
+
   
     .tab-links {
       font-size: 14px;
@@ -479,3 +480,15 @@ nav .fas{
       display: block;
     }
   }
+
+  @media screen and (max-width: 540px) {
+    .about-col-2 {
+        font-size: 14px;
+        margin-top: 380px; /* Adjusted margin for better spacing */
+        text-align: left;
+        margin-left: -120px;
+        flex-basis: 90%; /* Adjusted flex-basis for better responsiveness */
+        margin-bottom: -120px;
+          
+      }
+}
