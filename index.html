@@ -189,7 +189,24 @@ Utilizing my skills in React, Angular, and other front-end technologies to build
     document.getElementById(tabname).classList.add("active-tab");
 }
 </script>
-
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzrNoK9v1PMjBRfdV_WPqZ1BrlWlABdtTbAWTnSpsB0FrR_CBauzcURzokKvV3WCEwE7A/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message Sent Successfully"
+            setTimeout(function(){
+                msg.innerHTML =""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 <script>
     var sidemenu = document.getElementById("sidemenu");
 
@@ -269,24 +286,7 @@ Utilizing my skills in React, Angular, and other front-end technologies to build
         }
     });
 </script> -->
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzrNoK9v1PMjBRfdV_WPqZ1BrlWlABdtTbAWTnSpsB0FrR_CBauzcURzokKvV3WCEwE7A/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message Sent Successfully"
-            setTimeout(function(){
-                msg.innerHTML =""
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
+
 
 
 </body>
