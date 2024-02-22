@@ -161,9 +161,9 @@ Utilizing my skills in React, Angular, and other front-end technologies to build
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
+                    <span id="msg"><button type="submit" class="btn btn2">Submit</button></span> 
                 </form>
-                <span id="msg"></span>
+                
             </div>
 
         </div>
@@ -201,24 +201,6 @@ Utilizing my skills in React, Angular, and other front-end technologies to build
     }
 </script>
 <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbygAVCxV2r3mCUO6PKtsOQKRxTdcnEiV-XA6T-yI-S0YcyHD9s1u_wOoDS_F3_op_62iQ/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message Sent Successfully"
-            setTimeout(function(){
-                msg.innerHTML =""
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
-<script>
   document.addEventListener('DOMContentLoaded', function() {
     // Initialize Typed.js
     var typed = new Typed('.typed', {
@@ -254,5 +236,58 @@ Utilizing my skills in React, Angular, and other front-end technologies to build
     // Call the function to initiate color change
     changeColor();
   </script>
+  <!-- <script>
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById('msg');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Get the form data
+        const formData = new FormData(form);
+
+        try {
+            // Send a POST request to the Google Form action URL
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+            });
+
+            if (response.ok) {
+                // Reset the form and show success message
+                form.reset();
+                msg.innerHTML = 'Message Sent Successfully';
+                setTimeout(() => {
+                    msg.innerHTML = '';
+                }, 5000);
+            } else {
+                throw new Error('Failed to send the message.');
+            }
+        } catch (error) {
+            console.error('Error:', error.message);
+            msg.innerHTML = 'Failed to send the message. Please try again later.';
+        }
+    });
+</script> -->
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzrNoK9v1PMjBRfdV_WPqZ1BrlWlABdtTbAWTnSpsB0FrR_CBauzcURzokKvV3WCEwE7A/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message Sent Successfully"
+            setTimeout(function(){
+                msg.innerHTML =""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+
 </body>
 </html>
